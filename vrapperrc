@@ -1,0 +1,32 @@
+" http://help.eclipse.org/help33/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/IWorkbenchActionDefinitionIds.html
+" http://help.eclipse.org/help33/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/ITextEditorActionDefinitionIds.html
+" http://help.eclipse.org/ganymede/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/actions/IJavaEditorActionDefinitionIds.html
+
+nnoremap <C-a> 0
+nnoremap <C-e> $
+nnoremap <C-f> <Right>
+nnoremap <C-b> <Left>
+nnoremap <C-u> 20<Up>
+nnoremap <C-d> 20<Down>
+
+inoremap <C-o> <Esc>o
+inoremap <C-a> <Esc>0i
+inoremap <C-e> <Esc>$i
+inoremap <C-f> <Esc><Right>a
+inoremap <C-b> <Esc>i
+inoremap <C-d> <Esc><Right>xi
+
+
+"  Insert mode中で単語単位/行単位の削除をアンドゥ可能にする
+"inoremap <C-u>  <C-g>u<C-u>
+"noremap <C-u>  <C-g>u<C-u>
+"noremap <C-w>  <C-g>u<C-w>
+
+eclipseaction DeletePreviousWord org.eclipse.ui.edit.text.deletePreviousWord
+inoremap <C-w> <ESC>:DeletePreviousWord<CR>i
+
+eclipseaction DeleteToEnd org.eclipse.ui.edit.text.delete.line.to.end
+inoremap <C-k> <Esc><Right>:DeleteToEnd<CR>a
+
+eclipseaction DeleteToBegin org.eclipse.ui.edit.text.delete.line.to.beginning
+inoremap <C-u> <Esc>:DeleteToBegin<CR>i
