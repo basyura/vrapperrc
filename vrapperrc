@@ -7,7 +7,7 @@ set ignorecase
 set smartcase
 
 nnoremap <C-a> 0
-nnoremap <C-e> $<Left>
+nnoremap <C-e> :LineEnd<CR>
 nnoremap <C-f> <Right>
 nnoremap <C-b> <Left>
 nnoremap <C-u> 20<Up>
@@ -15,11 +15,12 @@ nnoremap <C-d> 20<Down>
 
 nnoremap U  :Redo<CR>
 nnoremap mj :AddJavaDocComment<CR>
+nnoremap mi :OrganizeImports<CR>
 
 inoremap <C-o> <Esc>o
 inoremap <C-h> <BS>
 inoremap <C-a> <Esc>0i
-inoremap <C-e> <Esc>$i
+inoremap <C-e> <Esc>:LineEnd<CR>a
 inoremap <C-f> <Esc><Right>a
 inoremap <C-b> <Esc>i
 inoremap <C-d> <Esc><Right>xi
