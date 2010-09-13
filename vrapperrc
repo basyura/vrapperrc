@@ -10,6 +10,7 @@ nnoremap <C-u> 20<Up>
 nnoremap <C-d> 20<Down>
 
 inoremap <C-o> <Esc>o
+inoremap <C-h> <BS>
 inoremap <C-a> <Esc>0i
 inoremap <C-e> <Esc>$i
 inoremap <C-f> <Esc><Right>a
@@ -17,7 +18,7 @@ inoremap <C-b> <Esc>i
 inoremap <C-d> <Esc><Right>xi
 
 
-"  Insert mode’†‚Å’PŒê’PˆÊ/s’PˆÊ‚Ìíœ‚ğƒAƒ“ƒhƒD‰Â”\‚É‚·‚é
+"  Insert modeä¸­ã§å˜èªå˜ä½/è¡Œå˜ä½ã®å‰Šé™¤ã‚’ã‚¢ãƒ³ãƒ‰ã‚¥å¯èƒ½ã«ã™ã‚‹
 "inoremap <C-u>  <C-g>u<C-u>
 "noremap <C-u>  <C-g>u<C-u>
 "noremap <C-w>  <C-g>u<C-w>
@@ -30,3 +31,6 @@ inoremap <C-k> <Esc><Right>:DeleteToEnd<CR>a
 
 eclipseaction DeleteToBegin org.eclipse.ui.edit.text.delete.line.to.beginning
 inoremap <C-u> <Esc>:DeleteToBegin<CR>i
+
+eclipseaction Redo org.eclipse.ui.edit.redo
+"nnoremap <S-u> :Redo<CR>
