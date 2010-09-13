@@ -7,7 +7,7 @@ set ignorecase
 set smartcase
 
 nnoremap <C-a> 0
-nnoremap <C-e> $
+nnoremap <C-e> $<Left>
 nnoremap <C-f> <Right>
 nnoremap <C-b> <Left>
 nnoremap <C-u> 20<Up>
@@ -41,3 +41,463 @@ nnoremap U :Redo<CR>
 
 eclipseaction Format org.eclipse.jdt.ui.edit.text.java.format
 vnoremap = :Format<CR>
+
+eclipseaction AddJavaDocComment org.eclipse.jdt.ui.edit.text.java.add.javadoc.comment
+nnoremap mj :AddJavaDocComment<CR>
+
+
+"Action definition ID of the source -> add block comment action 
+eclipseaction ADD_BLOCK_COMMENT org.eclipse.jdt.ui.edit.text.java.add.block.comment
+
+"Action definition ID of the source -> add import action 
+eclipseaction ADD_IMPORT org.eclipse.jdt.ui.edit.text.java.add.import
+
+eclipseaction ADD_JAVADOC_COMMENT org.eclipse.jdt.ui.edit.text.java.add.javadoc.comment
+
+"definition ID of the source -> add unimplemented constructors action 
+eclipseaction ADD_UNIMPLEMENTED_CONTRUCTORS org.eclipse.jdt.ui.edit.text.java.add.unimplemented.constructors
+
+"definition ID of the refactor -> change type action 
+eclipseaction CHANGE_TYPE org.eclipse.jdt.ui.edit.text.java.change.type
+
+"definition id of the code clean up action 
+eclipseaction CLEAN_UP "org.eclipse.jdt.ui.edit.text.java.clean.up
+
+"definition ID of the source -> comment action 
+eclipseaction COMMENT org.eclipse.jdt.ui.edit.text.java.comment
+
+"definition ID of the edit -> content assist complete prefix action 
+eclipseaction CONTENT_ASSIST_COMPLETE_PREFIX "org.eclipse.jdt.ui.edit.text.java.complete.prefix
+
+"definition ID of the refactor -> convert anonymous to nested action 
+eclipseaction CONVERT_ANONYMOUS_TO_NESTED org.eclipse.jdt.ui.edit.text.java.convert.anonymous.to.nested
+
+"definition ID of the source -> generate delegates action 
+eclipseaction CREATE_DELEGATE_METHODS org.eclipse.jdt.ui.edit.text.java.create.delegate.methods
+
+"definition ID of the source -> generate setter/getter action 
+eclipseaction CREATE_GETTER_SETTER org.eclipse.jdt.ui.edit.text.java.create.getter.setter
+
+"definition ID of the source -> externalize strings action 
+eclipseaction EXTERNALIZE_STRINGS org.eclipse.jdt.ui.edit.text.java.externalize.strings
+
+"definition ID of the refactor -> extract class action 
+eclipseaction EXTRACT_CLASS org.eclipse.jdt.ui.edit.text.java.extract.class
+
+"definition ID of the refactor -> extract constant action 
+eclipseaction EXTRACT_CONSTANT org.eclipse.jdt.ui.edit.text.java.extract.constant
+
+"definition ID of the refactor -> extract interface action 
+eclipseaction EXTRACT_INTERFACE org.eclipse.jdt.ui.edit.text.java.extract.interface
+
+"definition ID of the refactor -> extract local variable action 
+eclipseaction EXTRACT_LOCAL_VARIABLE org.eclipse.jdt.ui.edit.text.java.extract.local.variable
+
+"definition ID of the refactor -> extract method action 
+eclipseaction EXTRACT_METHOD org.eclipse.jdt.ui.edit.text.java.extract.method
+
+"definition id of the collapse comments action 
+eclipseaction FOLDING_COLLAPSE_COMMENTS "org.eclipse.jdt.ui.edit.text.java.folding.collapseComments
+
+"definition id of the collapse members action 
+eclipseaction FOLDING_COLLAPSE_MEMBERS "org.eclipse.jdt.ui.edit.text.java.folding.collapseMembers
+
+"definition ID of the source -> format action 
+eclipseaction FORMAT org.eclipse.jdt.ui.edit.text.java.format
+
+"definition ID of the source ->generate constructor using fields action 
+eclipseaction GENERATE_CONSTRUCTOR_USING_FIELDS org.eclipse.jdt.ui.edit.text.java.generate.constructor.using.fields
+
+"definition ID of the source ->generate hashcode() and equals() action 
+eclipseaction GENERATE_HASHCODE_EQUALS org.eclipse.jdt.ui.edit.text.java.generate.hashcode.equals
+
+"definition ID of the edit -> go to matching bracket action 
+eclipseaction GOTO_MATCHING_BRACKET org.eclipse.jdt.ui.edit.text.java.goto.matching.bracket
+
+"definition ID of the edit -> go to next member action 
+eclipseaction GOTO_NEXT_MEMBER org.eclipse.jdt.ui.edit.text.java.goto.next.member
+
+"definition ID of the edit -> go to previous member action 
+eclipseaction GOTO_PREVIOUS_MEMBER org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+
+"definition ID of the source -> indent action 
+eclipseaction INDENT org.eclipse.jdt.ui.edit.text.java.indent
+
+"definition ID of the refactor -> infer generic type arguments action 
+eclipseaction INFER_TYPE_ARGUMENTS_ACTION org.eclipse.jdt.ui.edit.text.java.infer.type.arguments
+
+"definition ID of the refactor -> inline action 
+eclipseaction INLINE org.eclipse.jdt.ui.edit.text.java.inline
+
+"definition ID of the refactor -> introduce factory action 
+eclipseaction INTRODUCE_FACTORY org.eclipse.jdt.ui.edit.text.java.introduce.factory
+
+"definition ID of the refactor -> introduce indirection action 
+eclipseaction INTRODUCE_INDIRECTION org.eclipse.jdt.ui.edit.text.java.create.indirection
+
+"definition ID of the refactor -> introduce parameter action 
+eclipseaction INTRODUCE_PARAMETER org.eclipse.jdt.ui.edit.text.java.introduce.parameter
+
+"definition ID of the refactor -> introduce parameter object action 
+eclipseaction INTRODUCE_PARAMETER_OBJECT org.eclipse.jdt.ui.edit.text.java.introduce.parameter.object
+
+"definition ID of the refactor -> modify method parameters action 
+eclipseaction MODIFY_METHOD_PARAMETERS org.eclipse.jdt.ui.edit.text.java.modify.method.parameters
+
+"definition ID of the refactor -> move element action 
+eclipseaction MOVE_ELEMENT org.eclipse.jdt.ui.edit.text.java.move.element
+
+"definition ID of the refactor -> move inner type to top level action 
+eclipseaction MOVE_INNER_TO_TOP org.eclipse.jdt.ui.edit.text.java.move.inner.to.top.level
+
+"definition ID of the navigate -> open call hierarchy action 
+eclipseaction OPEN_CALL_HIERARCHY org.eclipse.jdt.ui.edit.text.java.org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy
+
+"definition ID of the navigate -> open action 
+eclipseaction OPEN_EDITOR org.eclipse.jdt.ui.edit.text.java.open.editor
+
+"definition ID of the navigate -> open external javadoc action 
+eclipseaction OPEN_EXTERNAL_JAVADOC org.eclipse.jdt.ui.edit.text.java.open.external.javadoc
+
+"definition ID of the navigate -> Show Hierarchy action 
+eclipseaction OPEN_HIERARCHY org.eclipse.jdt.ui.edit.text.java.open.hierarchy
+
+"definition ID of the Navigate -> Open Structure action 
+eclipseaction OPEN_STRUCTURE org.eclipse.jdt.ui.navigate.java.open.structure
+
+"definition ID of the navigate -> open super implementation action 
+eclipseaction OPEN_SUPER_IMPLEMENTATION org.eclipse.jdt.ui.edit.text.java.open.super.implementation
+
+"definition ID of the navigate -> open type hierarchy action 
+eclipseaction OPEN_TYPE_HIERARCHY org.eclipse.jdt.ui.edit.text.java.org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy
+
+"definition ID of the source -> organize imports action 
+eclipseaction ORGANIZE_IMPORTS org.eclipse.jdt.ui.edit.text.java.organize.imports
+
+"definition ID of the source -> override methods action 
+eclipseaction OVERRIDE_METHODS org.eclipse.jdt.ui.edit.text.java.override.methods
+
+"definition ID of the refactor -> promote local variable action 
+eclipseaction PROMOTE_LOCAL_VARIABLE org.eclipse.jdt.ui.edit.text.java.promote.local.variable
+
+"definition ID of the refactor -> pull up action 
+eclipseaction PULL_UP org.eclipse.jdt.ui.edit.text.java.pull.up
+
+"definition ID of the refactor -> push down action 
+eclipseaction PUSH_DOWN org.eclipse.jdt.ui.edit.text.java.push.down
+
+"definition id of the java quick format action 
+eclipseaction QUICK_FORMAT "org.eclipse.jdt.ui.edit.text.java.quick.format
+
+"definition ID of the source -> remove block comment action 
+eclipseaction REMOVE_BLOCK_COMMENT org.eclipse.jdt.ui.edit.text.java.remove.block.comment
+
+"definition ID of the remove occurrence annotations action 
+eclipseaction REMOVE_OCCURRENCE_ANNOTATIONS org.eclipse.jdt.ui.edit.text.remove.occurrence.annotations
+
+"definition ID of the refactor -> rename element action 
+eclipseaction RENAME_ELEMENT org.eclipse.jdt.ui.edit.text.java.rename.element
+
+"definition ID of the refactor -> replace invocations action 
+eclipseaction REPLACE_INVOCATIONS org.eclipse.jdt.ui.edit.text.java.replace.invocations
+
+"definition ID of the search -> occurrences in file > break/continue target action 
+eclipseaction SEARCH_BREAK_CONTINUE_TARGET_OCCURRENCES org.eclipse.jdt.ui.edit.text.java.search.return.continue.targets
+
+"definition ID of the search -> declarations in hierarchy action 
+eclipseaction SEARCH_DECLARATIONS_IN_HIERARCHY org.eclipse.jdt.ui.edit.text.java.search.declarations.in.hierarchy
+
+"definition ID of the search -> declarations in project action 
+eclipseaction SEARCH_DECLARATIONS_IN_PROJECTS org.eclipse.jdt.ui.edit.text.java.search.declarations.in.project
+
+"definition ID of the search -> declarations in working set action 
+eclipseaction SEARCH_DECLARATIONS_IN_WORKING_SET org.eclipse.jdt.ui.edit.text.java.search.declarations.in.working.set
+
+"definition ID of the search -> declarations in workspace action 
+eclipseaction SEARCH_DECLARATIONS_IN_WORKSPACE org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace
+
+"definition ID of the search -> occurrences in file > exceptions action 
+eclipseaction SEARCH_EXCEPTION_OCCURRENCES_IN_FILE org.eclipse.jdt.ui.edit.text.java.search.exception.occurrences
+
+"definition ID of the search -> occurrences in file > implements action 
+eclipseaction SEARCH_IMPLEMENT_OCCURRENCES_IN_FILE org.eclipse.jdt.ui.edit.text.java.search.implement.occurrences
+
+"definition ID of the search -> implementors in project action 
+eclipseaction SEARCH_IMPLEMENTORS_IN_PROJECT org.eclipse.jdt.ui.edit.text.java.search.implementors.in.project
+
+"definition ID of the search -> implementors in working set action 
+eclipseaction SEARCH_IMPLEMENTORS_IN_WORKING_SET org.eclipse.jdt.ui.edit.text.java.search.implementors.in.working.set
+
+"definition ID of the search -> implementors in workspace action 
+eclipseaction SEARCH_IMPLEMENTORS_IN_WORKSPACE org.eclipse.jdt.ui.edit.text.java.search.implementors.in.workspace
+
+"definition ID of the search -> occurrences in file > method exits action 
+eclipseaction SEARCH_METHOD_EXIT_OCCURRENCES org.eclipse.jdt.ui.edit.text.java.search.method.exits
+
+"definition ID of the search -> occurrences in file > elements action 
+eclipseaction SEARCH_OCCURRENCES_IN_FILE org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file
+
+"definition ID of the search -> occurrences in file quick menu action 
+eclipseaction SEARCH_OCCURRENCES_IN_FILE_QUICK_MENU org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu
+
+"definition ID of the search -> read access in hierarchy action 
+eclipseaction SEARCH_READ_ACCESS_IN_HIERARCHY org.eclipse.jdt.ui.edit.text.java.search.read.access.in.hierarchy
+
+"definition ID of the search -> read access in project action 
+eclipseaction SEARCH_READ_ACCESS_IN_PROJECT org.eclipse.jdt.ui.edit.text.java.search.read.access.in.project
+
+"definition ID of the search -> read access in working set action 
+eclipseaction SEARCH_READ_ACCESS_IN_WORKING_SET org.eclipse.jdt.ui.edit.text.java.search.read.access.in.working.set
+
+"definition ID of the search -> read access in workspace action 
+eclipseaction SEARCH_READ_ACCESS_IN_WORKSPACE org.eclipse.jdt.ui.edit.text.java.search.read.access.in.workspace
+
+"definition ID of the search -> references in hierarchy action 
+eclipseaction SEARCH_REFERENCES_IN_HIERARCHY org.eclipse.jdt.ui.edit.text.java.search.references.in.hierarchy
+
+"definition ID of the search -> references in project action 
+eclipseaction SEARCH_REFERENCES_IN_PROJECT org.eclipse.jdt.ui.edit.text.java.search.references.in.project
+
+"definition ID of the search -> references in working set action 
+eclipseaction SEARCH_REFERENCES_IN_WORKING_SET org.eclipse.jdt.ui.edit.text.java.search.references.in.working.set
+
+"definition ID of the search -> references in workspace action 
+eclipseaction SEARCH_REFERENCES_IN_WORKSPACE org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
+
+"definition ID of the search -> write access in hierarchy action 
+eclipseaction SEARCH_WRITE_ACCESS_IN_HIERARCHY org.eclipse.jdt.ui.edit.text.java.search.write.access.in.hierarchy
+
+"definition ID of the search -> write access in project action 
+eclipseaction SEARCH_WRITE_ACCESS_IN_PROJECT org.eclipse.jdt.ui.edit.text.java.search.write.access.in.project
+
+"definition ID of the search -> write access in working set action 
+eclipseaction SEARCH_WRITE_ACCESS_IN_WORKING_SET org.eclipse.jdt.ui.edit.text.java.search.write.access.in.working.set
+
+"definition ID of the search -> write access in workspace action 
+eclipseaction SEARCH_WRITE_ACCESS_IN_WORKSPACE org.eclipse.jdt.ui.edit.text.java.search.write.access.in.workspace
+
+"definition ID of the edit -> select enclosing action 
+eclipseaction SELECT_ENCLOSING org.eclipse.jdt.ui.edit.text.java.select.enclosing
+
+"definition ID of the edit -> select restore last action 
+eclipseaction SELECT_LAST org.eclipse.jdt.ui.edit.text.java.select.last
+
+"definition ID of the edit -> select next action 
+eclipseaction SELECT_NEXT org.eclipse.jdt.ui.edit.text.java.select.next
+
+"definition ID of the edit -> select previous action 
+eclipseaction SELECT_PREVIOUS org.eclipse.jdt.ui.edit.text.java.select.previous
+
+"definition ID of the refactor -> self encapsulate field action 
+eclipseaction SELF_ENCAPSULATE_FIELD org.eclipse.jdt.ui.edit.text.java.self.encapsulate.field
+
+"definition id of show in breadcrumb action 
+eclipseaction SHOW_IN_BREADCRUMB "org.eclipse.jdt.ui.edit.text.java.gotoBreadcrumb
+
+"definition ID of the navigate -> show in navigator action 
+eclipseaction SHOW_IN_NAVIGATOR_VIEW org.eclipse.jdt.ui.edit.text.java.show.in.navigator.view
+
+"definition ID of the navigate -> show in package explorer action 
+eclipseaction SHOW_IN_PACKAGE_VIEW org.eclipse.jdt.ui.edit.text.java.show.in.package.view
+
+"definition ID of the navigate -> Show Outline action 
+SHOW_OUTLINE org.eclipse.jdt.ui.edit.text.java.show.outline
+
+"definition ID of the source -> sort order action 
+SORT_MEMBERS org.eclipse.jdt.ui.edit.text.java.sort.members
+
+"definition ID of the source -> surround with try/catch action 
+eclipseaction SURROUND_WITH_TRY_CATCH org.eclipse.jdt.ui.edit.text.java.surround.with.try.catch
+
+"definition id of toggle breadcrumb action 
+eclipseaction TOGGLE_BREADCRUMB "org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb
+
+"definition ID of the source -> toggle comment action 
+eclipseaction TOGGLE_COMMENT org.eclipse.jdt.ui.edit.text.java.toggle.comment
+
+"definition id of toggle mark occurrences action 
+eclipseaction TOGGLE_MARK_OCCURRENCES "org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences
+
+"definition ID of the edit -> smart typing action 
+TOGGLE_SMART_TYPING org.eclipse.jdt.smartTyping.toggle
+
+"definition ID of the toggle text hover tool bar button action 
+eclipseaction TOGGLE_TEXT_HOVER org.eclipse.jdt.ui.edit.text.java.toggle.text.hover
+
+"definition ID of the source -> uncomment action 
+eclipseaction UNCOMMENT org.eclipse.jdt.ui.edit.text.java.uncomment
+
+"definition ID of the refactor -> use supertype action 
+eclipseaction USE_SUPERTYPE org.eclipse.jdt.ui.edit.text.java.use.supertype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"DELETE_LINE
+"    Action definition id of the edit delete line action. Value: "org.eclipse.ui.edit.text.delete.line"
+"JOIN_LINES
+"    Action definition id of the edit join lines action. Value: "org.eclipse.ui.edit.text.join.line"
+"CUT_LINE
+"    Action definition id of the edit cut line action. Value: "org.eclipse.ui.edit.text.cut.line"
+"DELETE_LINE_TO_BEGINNING
+"    Action definition id of the edit delete line to beginning action. Value: "org.eclipse.ui.edit.text.delete.line.to.beginning"
+"CUT_LINE_TO_BEGINNING
+"    Action definition id of the edit cut line to beginning action. Value: "org.eclipse.ui.edit.text.cut.line.to.beginning"
+"DELETE_LINE_TO_END
+"    Action definition id of the edit delete line to end action. Value: "org.eclipse.ui.edit.text.delete.line.to.end"
+"CUT_LINE_TO_END
+"    Action definition id of the edit cut line to end action. Value: "org.eclipse.ui.edit.text.cut.line.to.end"
+"SET_MARK
+"    Action definition id of the edit set mark action. Value: "org.eclipse.ui.edit.text.set.mark"
+"CLEAR_MARK
+"    Action definition id of the edit clear mark action. Value: "org.eclipse.ui.edit.text.clear.mark"
+"SWAP_MARK
+"    Action definition id of the edit swap mark action. Value: "org.eclipse.ui.edit.text.swap.mark"
+"SMART_ENTER
+"    Action definition id of the smart enter action. Value: "org.eclipse.ui.edit.text.smartEnter"
+"SMART_ENTER_INVERSE
+"    Action definition id of the smart enter (inverse) action. Value: "org.eclipse.ui.edit.text.smartEnterInverse"
+"MOVE_LINES_UP
+"    Action definition id of the move lines upwards action. Value: "org.eclipse.ui.edit.text.moveLineUp"
+"MOVE_LINES_DOWN
+"    Action definition id of the move lines downwards action. Value: "org.eclipse.ui.edit.text.moveLineDown"
+"COPY_LINES_UP
+"    Action definition id of the copy lines upwards action. Value: "org.eclipse.ui.edit.text.copyLineUp"
+"COPY_LINES_DOWN
+"    Action definition id of the copy lines downwards action. Value: "org.eclipse.ui.edit.text.copyLineDown"
+"UPPER_CASE
+"    Action definition id of the upper case action. Value: "org.eclipse.ui.edit.text.upperCase"
+"LOWER_CASE
+"    Action definition id of the lower case action. Value: "org.eclipse.ui.edit.text.lowerCase"
+"LINE_UP
+"    Action definition id of the navigate goto previous line action. Value: "org.eclipse.ui.edit.text.goto.lineUp"
+"LINE_DOWN
+"    Action definition id of the navigate goto next line action. Value: "org.eclipse.ui.edit.text.goto.lineDown"
+"LINE_START
+"    Action definition id of the navigate goto line start action. Value: "org.eclipse.ui.edit.text.goto.lineStart"
+"LINE_END
+"    Action definition id of the navigate goto line end action. Value: "org.eclipse.ui.edit.text.goto.lineEnd"
+"LINE_GOTO
+"    Action definition id of the navigate goto line action. Value: "org.eclipse.ui.edit.text.goto.line"
+"COLUMN_PREVIOUS
+"    Action definition id of the navigate goto previous column action. Value: "org.eclipse.ui.edit.text.goto.columnPrevious"
+"COLUMN_NEXT
+"    Action definition id of the navigate goto next column action. Value: "org.eclipse.ui.edit.text.goto.columnNext"
+"PAGE_UP
+"    Action definition id of the navigate goto previous page action. Value: "org.eclipse.ui.edit.text.goto.pageUp"
+"PAGE_DOWN
+"    Action definition id of the navigate goto next page action. Value: "org.eclipse.ui.edit.text.goto.pageDown"
+"WORD_PREVIOUS
+"    Action definition id of the navigate goto previous word action. Value: "org.eclipse.ui.edit.text.goto.wordPrevious"
+"WORD_NEXT
+"    Action definition id of the navigate goto next word action. Value: "org.eclipse.ui.edit.text.goto.wordNext"
+"TEXT_START
+"    Action definition id of the navigate goto text start action. Value: "org.eclipse.ui.edit.text.goto.textStart"
+"TEXT_END
+"    Action definition id of the navigate goto text end action. Value: "org.eclipse.ui.edit.text.goto.textEnd"
+"WINDOW_START
+"    Action definition id of the navigate goto start of window action. Value: "org.eclipse.ui.edit.text.goto.windowStart"
+"WINDOW_END
+"    Action definition id of the navigate goto end of window action. Value: "org.eclipse.ui.edit.text.goto.windowEnd"
+"SCROLL_LINE_UP
+"    Action definition id of the navigate scroll line up action. Value: "org.eclipse.ui.edit.text.scroll.lineUp"
+"SCROLL_LINE_DOWN
+"    Action definition id of the navigate scroll line down action. Value: "org.eclipse.ui.edit.text.scroll.lineDown"
+"SELECT_LINE_UP
+"    Action definition id of the select line up action. Value: "org.eclipse.ui.edit.text.select.lineUp"
+"SELECT_LINE_DOWN
+"    Action definition id of the select line down action. Value: "org.eclipse.ui.edit.text.select.lineDown"
+"SELECT_LINE_START
+"    Action definition id of the select line start action. Value: "org.eclipse.ui.edit.text.select.lineStart"
+"SELECT_LINE_END
+"    Action definition id of the select line end action. Value: "org.eclipse.ui.edit.text.select.lineEnd"
+"SELECT_COLUMN_PREVIOUS
+"    Action definition id of the select previous column action. Value: "org.eclipse.ui.edit.text.select.columnPrevious"
+"SELECT_COLUMN_NEXT
+"    Action definition id of the select next column action. Value: "org.eclipse.ui.edit.text.select.columnNext"
+"SELECT_PAGE_UP
+"    Action definition id of the select page up action. Value: "org.eclipse.ui.edit.text.select.pageUp"
+"SELECT_PAGE_DOWN
+"    Action definition id of the select page down action. Value: "org.eclipse.ui.edit.text.select.pageDown"
+"SELECT_WORD_PREVIOUS
+"    Action definition id of the select previous word action. Value: "org.eclipse.ui.edit.text.select.wordPrevious"
+"SELECT_WORD_NEXT
+"    Action definition id of the select next word action. Value: "org.eclipse.ui.edit.text.select.wordNext"
+"SELECT_TEXT_START
+"    Action definition id of the select text start action. Value: "org.eclipse.ui.edit.text.select.textStart"
+"SELECT_TEXT_END
+"    Action definition id of the select text end action. Value: "org.eclipse.ui.edit.text.select.textEnd"
+"SELECT_WINDOW_START
+"    Action definition id of the select window start action. Value: "org.eclipse.ui.edit.text.select.windowStart"
+"SELECT_WINDOW_END
+"    Action definition id of the select window end action. Value: "org.eclipse.ui.edit.text.select.windowEnd"
+"DELETE_PREVIOUS
+"    Action definition id of the edit delete previous character action. Value: "org.eclipse.ui.edit.text.deletePrevious"
+"DELETE_NEXT
+"    Action definition id of the edit delete next character action. Value: "org.eclipse.ui.edit.text.deleteNext"
+"DELETE_PREVIOUS_WORD
+"    Action definition id of the edit delete previous word action. Value: "org.eclipse.ui.edit.text.deletePreviousWord"
+"DELETE_NEXT_WORD
+"    Action definition id of the edit delete next word action. Value: "org.eclipse.ui.edit.text.deleteNextWord"
+"SHIFT_RIGHT
+"    Action definition id of the edit shift right action. Value: "org.eclipse.ui.edit.text.shiftRight"
+"SHIFT_LEFT
+"    Action definition id of the edit shift left action. Value: "org.eclipse.ui.edit.text.shiftLeft"
+"TOGGLE_OVERWRITE
+"    Action definition id of the toggle input mode action. Value: "org.eclipse.ui.edit.text.toggleOverwrite"
+"TOGGLE_SHOW_SELECTED_ELEMENT_ONLY
+"    Action definition id of toggle show selected element only action. Value: "org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"
+"SHOW_RULER_CONTEXT_MENU
+"    Action definition id of the show ruler context menu action. Value: "org.eclipse.ui.edit.text.showRulerContextMenu"
+"GOTO_LAST_EDIT_POSITION
+"    Action definition id of go to last edit position action. Value: "org.eclipse.ui.edit.text.gotoLastEditPosition"
+"GOTO_NEXT_ANNOTATION
+"    Action definition id of go to next annotation action. Value: "org.eclipse.ui.edit.text.gotoNextAnnotation"
+"GOTO_PREVIOUS_ANNOTATION
+"    Action definition id of go to previous annotation action. Value: "org.eclipse.ui.edit.text.gotoPreviousAnnotation"
+"CONTENT_ASSIST_PROPOSALS
+"    Action definition ID of the edit -> content assist proposal action Value: "org.eclipse.ui.edit.text.contentAssist.proposals").
+"CONTENT_ASSIST_CONTEXT_INFORMATION
+"    Action definition ID of the edit -> content assist context information action Value: "org.eclipse.ui.edit.text.contentAssist.contextInformation").
+"QUICK_ASSIST
+"    Action definition ID of the edit -> quick assist proposal action
+"    (value "org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals").
+"TOGGLE_INSERT_MODE
+"    Action definition ID of the edit -> smart insert mode action Value: "org.eclipse.ui.edit.text.toggleInsertMode").
+"CHANGE_ENCODING
+"    Value: "org.eclipse.ui.edit.text.changeEncoding").
+"QUICKDIFF_REVERTLINE
+"    Command ID of the revert line action Value: "org.eclipse.ui.editors.quickdiff.revertLine").
+"QUICKDIFF_REVERT
+"    Command ID of the revert selection/block action Value: "org.eclipse.ui.editors.quickdiff.revert").
+"QUICKDIFF_TOGGLE
+"    Command ID of the toggle quick diff action. The name has no proper prefix for historical reasons. Value: "org.eclipse.quickdiff.toggle").
+"LINENUMBER_TOGGLE
+"    Command ID of the toggle display of line numbers Value: "org.eclipse.ui.editors.lineNumberToggle").
+"HIPPIE_COMPLETION
+"    Action definition ID of the edit -> text complete action Value: "org.eclipse.ui.edit.text.hippieCompletion").
+"REVISION_RENDERING_CYCLE
+"    Command ID of the command to cycle the revision rendering mode. Value: "org.eclipse.ui.editors.revisions.rendering.cycle").
+"REVISION_AUTHOR_TOGGLE
+"    Command ID of the command to toggle the revision author display. Value: "org.eclipse.ui.editors.revisions.author.toggle").
+"REVISION_ID_TOGGLE
+"    Command ID of the command to toggle the revision ID display. Value: "org.eclipse.ui.editors.revisions.id.toggle").
+"RECENTER
+"    Command ID of the recenter command. Value: "org.eclipse.ui.edit.text.recenter").
+"SHOW_WHITESPACE_CHARACTERS
+"    Command ID of the command to toggle the display of whitespace characters. Value: "org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters").
+"SHOW_INFORMATION
+"    Command ID of the command to display information for the current caret location in a sticky hover. Value "org.eclipse.ui.edit.text.showInformation").
