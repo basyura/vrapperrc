@@ -2,6 +2,10 @@
 " http://help.eclipse.org/help33/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/ITextEditorActionDefinitionIds.html
 " http://help.eclipse.org/ganymede/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/actions/IJavaEditorActionDefinitionIds.html
 
+
+set ignorecase
+set smartcase
+
 nnoremap <C-a> 0
 nnoremap <C-e> $
 nnoremap <C-f> <Right>
@@ -18,10 +22,10 @@ inoremap <C-b> <Esc>i
 inoremap <C-d> <Esc><Right>xi
 
 
-"  Insert mode中で単語単位/行単位の削除をアンドゥ可能にする
-"inoremap <C-u>  <C-g>u<C-u>
-"noremap <C-u>  <C-g>u<C-u>
-"noremap <C-w>  <C-g>u<C-w>
+inoremap <C-u>  <C-g>u<C-u>
+noremap <C-u>  <C-g>u<C-u>
+noremap <C-w>  <C-g>u<C-w>
+
 
 eclipseaction DeletePreviousWord org.eclipse.ui.edit.text.deletePreviousWord
 inoremap <C-w> <ESC>:DeletePreviousWord<CR>i
@@ -33,5 +37,7 @@ eclipseaction DeleteToBegin org.eclipse.ui.edit.text.delete.line.to.beginning
 inoremap <C-u> <Esc>:DeleteToBegin<CR>i
 
 eclipseaction Redo org.eclipse.ui.edit.redo
-"nnoremap <S-u> :Redo<CR>
+nnoremap U :Redo<CR>
 
+eclipseaction Format org.eclipse.jdt.ui.edit.text.java.format
+vnoremap = :Format<CR>
