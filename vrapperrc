@@ -34,3 +34,4 @@ inoremap <C-u> <Esc>:DeleteToBegin<CR>i
 
 eclipseaction Redo org.eclipse.ui.edit.redo
 "nnoremap <S-u> :Redo<CR>
+
