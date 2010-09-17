@@ -21,13 +21,13 @@ inoremap <C-f> <Esc><Right>a
 inoremap <C-b> <Esc>i
 inoremap <C-d> <Esc><Right>xi
 
-inoremap <C-w> <ESC>:DeletePreviousWord<CR>i
+"inoremap <C-w> <ESC>:DeletePreviousWord<CR>xi
 inoremap <C-k> <Esc><Right>:DeleteLineToEnd<CR>a
 inoremap <C-u> <Esc>:DeleteLineToBeginning<CR>i
 
 inoremap <C-u>  <C-g>u<C-u>
 "noremap  <C-u>  <C-g>u<C-u>
-noremap  <C-w>  <C-g>u<C-w>
+"noremap  <C-w>  <C-g>u<C-w>
 
 vnoremap = :Format<CR>
 vnoremap c :Copy<CR>
